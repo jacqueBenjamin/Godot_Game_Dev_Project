@@ -1,0 +1,43 @@
+[gd_scene load_steps=4 format=3 uid="uid://haa5yplhyjtg"]
+
+[ext_resource type="Script" path="res://HUD/HUD.gd" id="1_otc6w"]
+
+[sub_resource type="Gradient" id="Gradient_f7opf"]
+offsets = PackedFloat32Array(0.510135)
+colors = PackedColorArray(0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_pwvt7"]
+gradient = SubResource("Gradient_f7opf")
+width = 960
+height = 24
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_otc6w")
+
+[node name="EnemyHealth" type="Label" parent="."]
+offset_left = 910.0
+offset_right = 950.0
+offset_bottom = 26.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+text = "30"
+horizontal_alignment = 2
+
+[node name="PlayerHealth" type="Label" parent="."]
+offset_left = 10.0
+offset_right = 29.0
+offset_bottom = 26.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+text = "10"
+
+[node name="PlayerMana" type="Label" parent="."]
+offset_left = 100.0
+offset_right = 119.0
+offset_bottom = 26.0
+theme_override_colors/font_color = Color(0, 0, 1, 1)
+text = "3"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(480, 12)
+texture = SubResource("GradientTexture2D_pwvt7")
+metadata/_edit_lock_ = true

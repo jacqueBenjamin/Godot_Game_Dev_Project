@@ -1,0 +1,9 @@
+Tileset - https://cainos.itch.io/pixel-art-top-down-basic
+Player - https://www.spriters-resource.com/pc_computer/titansouls/sheet/78041/
+Enemy - https://darkpixel-kronovi.itch.io/mecha-golem-free
+Lightning - https://pimen.itch.io/thunder-spell-effect-02
+Sword - https://www.spriters-resource.com/pc_computer/hollowknight/sheet/132997/
+Fireball - https://nyknck.itch.io/fireball-animation
+	 - https://nyknck.itch.io/pixelarteffectfx017
+Background - https://deep-fold.itch.io/space-background-generator
+Music - https://davidkbd.itch.io/cosmic-journey-space-themed-music-pack

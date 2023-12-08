@@ -1,0 +1,19 @@
+[remap]
+
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dtilqk05wp4ow"
+path="res://.godot/imported/DavidKBD - Cosmic Pack 06 - Lunar Rampage-full.ogg-70cf4327d95a6bd81ecb55e4ebabfa71.oggvorbisstr"
+
+[deps]
+
+source_file="res://Assets/Sound/DavidKBD - Cosmic Pack 06 - Lunar Rampage-full.ogg"
+dest_files=["res://.godot/imported/DavidKBD - Cosmic Pack 06 - Lunar Rampage-full.ogg-70cf4327d95a6bd81ecb55e4ebabfa71.oggvorbisstr"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

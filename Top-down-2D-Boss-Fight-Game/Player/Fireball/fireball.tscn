@@ -1,0 +1,69 @@
+[gd_scene load_steps=12 format=3 uid="uid://c0k6jcub2e2wq"]
+
+[ext_resource type="Script" path="res://Player/Fireball/fireball.gd" id="1_vrytu"]
+[ext_resource type="Texture2D" uid="uid://dy2gm6v70wi0" path="res://Assets/Player/fireball_V_1_1/B500-2.PNG" id="2_ght2o"]
+[ext_resource type="Texture2D" uid="uid://c4vvhsnw54don" path="res://Assets/Player/fireball_V_1_1/B500-3.PNG" id="3_wwx7h"]
+[ext_resource type="Texture2D" uid="uid://cxv88mxbbb45" path="res://Assets/Player/fireball_V_1_1/B500-4.PNG" id="4_ruyt5"]
+[ext_resource type="Texture2D" uid="uid://danylbq7e2obk" path="res://Assets/Player/FB00_nyknck/FB00_nyknck/FB001.png" id="5_i0wli"]
+[ext_resource type="Texture2D" uid="uid://b2vkmyi4jqgx" path="res://Assets/Player/FB00_nyknck/FB00_nyknck/FB002.png" id="6_odeu7"]
+[ext_resource type="Texture2D" uid="uid://bwxu7eeyfdw3c" path="res://Assets/Player/FB00_nyknck/FB00_nyknck/FB003.png" id="7_6n8ur"]
+[ext_resource type="Texture2D" uid="uid://dimwiphuit101" path="res://Assets/Player/FB00_nyknck/FB00_nyknck/FB004.png" id="8_e01h0"]
+[ext_resource type="Texture2D" uid="uid://dp7gbqcxx53qh" path="res://Assets/Player/FB00_nyknck/FB00_nyknck/FB005.png" id="9_wllw2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_exfgy"]
+radius = 9.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5yyit"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_ght2o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_wwx7h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ruyt5")
+}],
+"loop": false,
+"name": &"fireball_collision",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_i0wli")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_odeu7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_6n8ur")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_e01h0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_wllw2")
+}],
+"loop": true,
+"name": &"moving_fireball",
+"speed": 10.0
+}]
+
+[node name="fireball" type="Area2D" groups=["fireball"]]
+collision_layer = 8
+collision_mask = 5
+script = ExtResource("1_vrytu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+z_index = 1
+position = Vector2(12, -1.5)
+shape = SubResource("CircleShape2D_exfgy")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_5yyit")
+animation = &"fireball_collision"
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
